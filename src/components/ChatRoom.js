@@ -1,11 +1,8 @@
-import React from 'react'
+import React, { useRef, useState } from 'react';
 
 const ChatRoom = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  const ref = useRef();
+  return <div></div>;
+};
 
-export default ChatRoom
+export default ChatRoom;
