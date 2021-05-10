@@ -15,7 +15,7 @@ ul, li {
   text-align: left;
   list-style: none;
 }
-p {
+/* p {
   max-width: 500px;
   margin-bottom: 12px;
   line-height: 24px;
@@ -24,7 +24,7 @@ p {
   position: relative;
   color: white;
   text-align: center;
-}
+} */
 button {
   background-color: #282c34; /* Green */
   border: none;
