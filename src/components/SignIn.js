@@ -18,8 +18,13 @@ const SignIn = () => {
 export default SignIn;
 
 const Button = styled.button`
-  color: #282c34;
-  background: white;
-  max-width: 400px;
-  margin: 0 auto;
+  background-color: #282c34; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.25rem;
 `;

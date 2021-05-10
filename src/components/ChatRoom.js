@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { auth, firestore } from '../firebase';
+import { auth, firestore, getFirestoreTimestamp } from '../firebase';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import ChatMsg from './ChatMsg';
 import styled from 'styled-components';
@@ -17,9 +17,10 @@ const ChatRoom = () => {
 
     const { uid, photoURL } = auth.currentUser;
 
+    let timestamp = await getFirestoreTimestamp();
     await messagesRef.add({
       text: formValue,
-      createdAt: firestore.FieldValue.serverTimestamp(),
+      createdAt: timestamp,
       uid,
       photoURL,
     });
@@ -34,7 +35,7 @@ const ChatRoom = () => {
         {messages && messages.map((msg) => <ChatMsg key={msg.id} message={msg} />)}
         <span ref={ref}></span>
       </Main>
-      <form onSubmit={sendMessage}>
+      <Form onSubmit={sendMessage}>
         <input
           value={formValue}
           onChange={(e) => setFormValue(e.target.value)}
@@ -43,11 +44,43 @@ const ChatRoom = () => {
         <button type='submit' disabled={!formValue}>
           Submit
         </button>
-      </form>
+      </Form>
     </>
   );
 };
 
 export default ChatRoom;
 
-const Main = styled.main``;
+const Main = styled.main`
+  padding: 10px;
+  height: 80vh;
+  margin: 10vh 0 10vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+`;
+
+const Form = styled.form`
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  background-color: rgb(24, 23, 23);
+  width: 100%;
+  max-width: 728px;
+  display: flex;
+  font-size: 1.5rem;
+  button {
+    width: 20%;
+    background-color: rgb(56, 56, 143);
+  }
+  input {
+    line-height: 1.5;
+    width: 100%;
+    font-size: 1.5rem;
+    background: rgb(58, 58, 58);
+    color: white;
+    outline: none;
+    border: none;
+    padding: 0 10px;
+  }
+`;

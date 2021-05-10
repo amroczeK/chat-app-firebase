@@ -1,15 +1,12 @@
-import { useContext } from 'react';
-import { AuthContext, AuthProvider } from './contexts/Auth';
+import { AuthProvider } from './contexts/Auth';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from './GlobalStyle';
 import { theme } from './theme';
 import styled from 'styled-components';
 import Header from './components/Header';
-import ChatRoom from './components/ChatRoom';
-import SignIn from './components/SignIn';
+import Landing from './components/Landing';
 
 function App() {
-  const { user } = useContext(AuthContext);
   return (
     <AuthProvider>
       <Container>
@@ -18,7 +15,7 @@ function App() {
           <Header>
             <h1>chat app</h1>
           </Header>
-          <Section>{user ? <ChatRoom /> : <SignIn />}</Section>
+          <Landing/>
         </ThemeProvider>
       </Container>
     </AuthProvider>
@@ -32,12 +29,4 @@ const Container = styled.div`
   text-align: center;
   max-width: 728px;
   margin: 0 auto;
-`;
-
-const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: rgb(40, 37, 53);
 `;

@@ -1,8 +1,14 @@
 import React from 'react';
+import SignOut from './SignOut';
 import styled from 'styled-components';
 
 const Header = () => {
-  return <StyledHeader></StyledHeader>;
+  return (
+    <StyledHeader>
+      <h1>CHAT APP</h1>
+      <SignOut />
+    </StyledHeader>
+  );
 };
 
 export default Header;
