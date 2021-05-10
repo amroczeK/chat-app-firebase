@@ -15,16 +15,7 @@ ul, li {
   text-align: left;
   list-style: none;
 }
-/* p {
-  max-width: 500px;
-  margin-bottom: 12px;
-  line-height: 24px;
-  padding: 10px 20px;
-  border-radius: 25px;
-  position: relative;
-  color: white;
-  text-align: center;
-} */
+
 button {
   background-color: #282c34; /* Green */
   border: none;
@@ -36,6 +27,7 @@ button {
   cursor: pointer;
   font-size: 1.25rem;
 }
+
 button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
