@@ -21,5 +21,5 @@ const Section = styled.section`
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  background-color: rgb(40, 37, 53);
+  background-color: #151a21;
 `;

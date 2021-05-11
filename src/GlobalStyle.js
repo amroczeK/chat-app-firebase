@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
   text-decoration: none !important;
 }
 body {
-  background-color: #282c34;
+  background-color: #0B0E11;
   font-family: 'Inter', sans-serif;
 }
 ul, li {
@@ -29,7 +29,7 @@ button {
 }
 
 button:disabled {
-  opacity: 0.5;
+  opacity: 0.7;
   cursor: not-allowed;
 }
   
@@ -38,11 +38,11 @@ main::-webkit-scrollbar {
 }
 
 main::-webkit-scrollbar-track {
-  background: #1e1e24;
+  background: #49505B;
 }
 
 main::-webkit-scrollbar-thumb {
-  background: #6649b8;
+  background: #DEE3EA;
 }
 `;
 

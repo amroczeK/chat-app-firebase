@@ -39,7 +39,7 @@ const ChatRoom = () => {
         <input
           value={formValue}
           onChange={(e) => setFormValue(e.target.value)}
-          placeholder='Type message...'
+          placeholder='Send a message'
         />
         <button type='submit' disabled={!formValue}>
           Send
@@ -64,23 +64,25 @@ const Form = styled.form`
   height: 10vh;
   position: fixed;
   bottom: 0;
-  background-color: rgb(24, 23, 23);
+  background-color: #252c36;
   width: 100%;
   max-width: 728px;
   display: flex;
   font-size: 1.5rem;
   button {
+    color: white;
     width: 20%;
-    background-color: rgb(56, 56, 143);
+    background-color: #151a21;
   }
   input {
     line-height: 1.5;
     width: 100%;
     font-size: 1.5rem;
-    background: rgb(58, 58, 58);
+    background: #252c36;
     color: white;
     outline: none;
     border: none;
     padding: 0 10px;
+    margin-left: 15px;
   }
 `;

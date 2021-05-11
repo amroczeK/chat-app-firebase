@@ -25,7 +25,6 @@ function App() {
 export default App;
 
 const Container = styled.div`
-  background-color: #282c34;
   text-align: center;
   max-width: 728px;
   margin: 0 auto;

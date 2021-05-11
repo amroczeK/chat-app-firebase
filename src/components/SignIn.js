@@ -1,6 +1,7 @@
 import React from 'react';
 import { auth, googleAuthProvider } from '../firebase';
 import styled from 'styled-components';
+import { Google } from '@styled-icons/boxicons-logos/Google';
 
 const SignIn = () => {
   const signInWithGoogle = () => {
@@ -8,23 +9,49 @@ const SignIn = () => {
   };
 
   return (
-    <>
-      <Button onClick={signInWithGoogle}>Sign in with Google</Button>
-      <p>Do not violate the community guidelines or you will be banned for life!</p>
-    </>
+    <Container>
+      <Button onClick={signInWithGoogle}>
+        <Icon />
+        <strong>Log in with Google</strong>
+      </Button>
+      <p>By logging in you accept our Privacy Policy and Terms of Service.</p>
+    </Container>
   );
 };
 
 export default SignIn;
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: white;
+    margin-top: 25px;
+  }
+`;
+
 const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #282c34; /* Green */
+  width: 30vw;
   border: none;
+  border-radius: 25px;
   color: white;
-  padding: 15px 32px;
-  text-align: center;
   text-decoration: none;
-  display: inline-block;
   cursor: pointer;
-  font-size: 1.25rem;
+  strong {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+`;
+
+const Icon = styled(Google)`
+  color: white;
+  height: 40px;
+  width: 40px;
+  margin-right: 30px;
 `;

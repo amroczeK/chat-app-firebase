@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Header = () => {
   return (
     <StyledHeader>
-      <h1>CHAT APP</h1>
+      <h1>Firebase Chat App</h1>
       <SignOut />
     </StyledHeader>
   );
@@ -14,7 +14,7 @@ const Header = () => {
 export default Header;
 
 const StyledHeader = styled.header`
-  background-color: #181717;
+  background-color: #252C36;
   height: 10vh;
   min-height: 50px;
   color: white;
@@ -28,4 +28,7 @@ const StyledHeader = styled.header`
   z-index: 99;
   padding: 10px;
   box-sizing: border-box;
+  h1 {
+    padding-left: 15px;
+  }
 `;
