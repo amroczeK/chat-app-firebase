@@ -2,6 +2,8 @@
 
 This portfolio was developed using React and deployed to Firebase, utilizing various cloud services like Firestore, Authentication, and Hosting.
 
+[Live Demo](https://chat-app-realtime-f8f3b.web.app/)
+
 ### Features
 
 - Secure Firestore rules
