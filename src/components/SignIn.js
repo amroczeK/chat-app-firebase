@@ -37,7 +37,6 @@ const Button = styled.button`
   justify-content: center;
   align-items: center;
   background-color: #282c34; /* Green */
-  width: 30vw;
   border: none;
   border-radius: 25px;
   color: white;
@@ -46,6 +45,9 @@ const Button = styled.button`
   strong {
     font-size: 1.25rem;
     text-align: center;
+  }
+  &:hover {
+    background-color: #323d4d;
   }
 `;
 
