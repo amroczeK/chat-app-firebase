@@ -11,11 +11,10 @@ const SignOut = () => {
 export default SignOut;
 
 const Button = styled.button`
+  display: flex;
   background-color: #151a21;
   border: none;
   color: white;
-  padding: 15px 32px;
-  margin-right: 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

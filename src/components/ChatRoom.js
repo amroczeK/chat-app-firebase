@@ -15,7 +15,7 @@ const ChatRoom = () => {
   const sendMessage = async (e) => {
     e.preventDefault();
 
-    const { uid, photoURL } = auth.currentUser;
+    const { uid, photoURL, displayName } = auth.currentUser;
 
     let timestamp = await getFirestoreTimestamp();
     await messagesRef.add({
@@ -23,6 +23,7 @@ const ChatRoom = () => {
       createdAt: timestamp,
       uid,
       photoURL,
+      displayName,
     });
 
     setFormValue('');
