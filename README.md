@@ -1,6 +1,6 @@
-# Adrian's Portfolio Website &middot; <a href="https://reactjs.org/" target="_blank"><img src="https://img.shields.io/badge/REACT-17.0.2-blue?longCache=true&style=for-the-badge" alt="Flutter"></a> <a href="https://firebase.google.com/" target="_blank"><img src="https://img.shields.io/badge/Firebase-Cloud-orange.svg?longCache=true&style=for-the-badge" alt="Firebase"></a>
+# Realtime Chat App &middot; <a href="https://reactjs.org/" target="_blank"><img src="https://img.shields.io/badge/REACT-17.0.2-blue?longCache=true&style=for-the-badge" alt="Flutter"></a> <a href="https://firebase.google.com/" target="_blank"><img src="https://img.shields.io/badge/Firebase-Cloud-orange.svg?longCache=true&style=for-the-badge" alt="Firebase"></a>
 
-This portfolio was developed using React and deployed to Firebase, utilizing various cloud services like Firestore, Authentication, and Hosting.
+This project was developed using ReactJs, Socket.io and deployed to Firebase, utilizing various cloud services like Firestore, Authentication, and Hosting.
 
 [Live Demo](https://chat-app-realtime-f8f3b.web.app/)
 
